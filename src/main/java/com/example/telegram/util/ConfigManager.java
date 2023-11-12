@@ -20,7 +20,7 @@ public class ConfigManager extends HttpServlet {
             logger.info("ConfigConstatns Init Start..!!!");
 
             Properties telegram_prop = new Properties();
-            telegram_is = getServletContext().getResourceAsStream("/WEB-INF/config/telegram.properties");
+            telegram_is = getServletContext().getResourceAsStream("/WEB-INF/config/application.properties");
             telegram_prop.load(telegram_is);
 
             ConfigConstants.TELEGRAM_TOKEN = telegram_prop.getProperty("notification.token");
